@@ -25,21 +25,31 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
+
+
 const pageRoles = {
+
   "/users.html": ["admin"],
   "/DoctorSearch.html": ["admin", "user"],
   "/doctor.html": ["admin", "doctor"],
+  "/index.html": ["admin"],
   "/profile.html": ["admin", "doctor", "user"],
 };
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+
+  //--------- Function to get getUserRoles---------//
 async function getUserRoles(id) {
   const userDocRef = doc(db, "users", id);
   const docSnapshot = await getDoc(userDocRef);
@@ -113,7 +123,7 @@ if (window.location.pathname == "/profile.html") {
   }
 
 
-  // Function to get username by userId
+  //-------------- Function to get username by userId
 async function getUsernameByUserId(userId) {
   try {
     // Reference to the user's document in the 'users' collection
@@ -192,6 +202,8 @@ document.querySelectorAll('input[name="role"]').forEach((radio) => {
   });
 });
 
+
+// ----------------Registration  function---------------------//
 async function register() {
   const email = document.getElementById("exampleInputEmail1").value;
   const password = document.getElementById("exampleInputPassword1").value;
@@ -255,7 +267,7 @@ async function register() {
   }
 }
 
-// Function to write data to Firestore
+// ----------------- Function to write data to Firestore------//
 async function writeData(name, email, role) {
   try {
     const docRef = await addDoc(collection(db, "users"), {
@@ -314,7 +326,8 @@ document.getElementById("registerButton")?.addEventListener("click", register);
 
 // document.getElementById("registerButton")?.addEventListener("click", register);
 // ------------
-// Function to fetch all users
+
+//------------------------- Function to fetch all users
 async function getAllUsers() {
   try {
     const querySnapshot = await getDocs(collection(db, "users"));
@@ -329,8 +342,8 @@ async function getAllUsers() {
   }
 }
 
-// Function to fetch a user by email
-async function getUserByEmail(email) {
+//------------ Function to fetch a user by email---------//
+  async function getUserByEmail(email) {
   try {
     const q = query(collection(db, "users"), where("email", "==", email));
     const querySnapshot = await getDocs(q);
@@ -350,7 +363,8 @@ async function getUserByEmail(email) {
 
 
 if (window.location.pathname == "/users.html") {
-  // Function to show all users in a table
+
+  // ------------Function to show all users in a table
   async function showUsers() {
     const users = await getAllUsers();
     console.log("All users:", users);
@@ -422,7 +436,7 @@ if (window.location.pathname == "/users.html") {
 
 }
 
-// Login function
+// -------------------Login function-----------------//
 async function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
