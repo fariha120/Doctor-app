@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Search Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="doctor-search-page">
+    <!-- Navbar -->
+  <!-- <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>Search doctor</h1>
+    </div>
+    <div class="navbar-menu">
+        <div id="user-profile" class="dropdown ">
+          <img id="profile-pic" src="https://via.placeholder.com/35" alt="Profile Picture" class="profile-pic">
+          <div id="dropdown-menu" class="dropdown-menu hidden">
+            <a href="#" id="my-profile">My Profile</a>
+            <button id="logout-btn">Logout</button>
+          </div>
+        </div>
+        <button id="login-btn " class="hidden">Login</button>
+      </div>
+  </nav> -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>My App</h1>
+    </div>
+    <div class="navbar-menu">
+      <div id="user-profile" class="dropdown">
+        <img id="profile-pic" src="https://via.placeholder.com/35" alt="Profile Picture" class="profile-pic">
+        <div id="dropdown-menu" class="dropdown-menu hidden">
+          <a href="./profile.html" id="my-profile" class="dropdown-item">My Profile</a>
+          <a id="logout-btn" class="dropdown-item">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+  <br>
+    <div class="search-container">
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search for doctors..." />
+
+        <!-- Filters -->
+        <div class="filters">
+            <label for="specialization">Specialization:</label>
+            <select id="specialization">
+                <option value="">All</option>
+                <option value="cardiologist">Cardiologist</option>
+                <option value="dermatologist">Dermatologist</option>
+                <option value="neurologist">Neurologist</option>
+            </select>
+
+            <label for="experience">Experience:</label>
+            <input type="number" id="experience" placeholder="Years of Experience" min="0">
+
+            <label for="ratings">Minimum Rating:</label>
+            <select id="ratings">
+                <option value="">All</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+            </select>
+        </div>
+
+        <div id="doctorCards" class="doctor-cards">
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/250" alt="Doctor Name">
+                <h3>Dr. Example</h3>
+                <p>General Physician</p>
+                <p>8 Years Experience</p>
+                <p class="rating">⭐ 4.2</p>
+                <button>View Profile</button>
+            </div>
+            <div id="doctorCards" class="doctor-cards">
+                <div class="doctor-card">
+                    <img src="https://via.placeholder.com/250" alt="Doctor Name">
+                    <h3>Dr. Example</h3>
+                    <p>Dermatologist</p>
+                    <p>7 Years Experience</p>
+                    <p class="rating">⭐ 4.2</p>
+                    <button>View Profile</button>
+                </div>
+             
+                  
+        </div>
+        
+        <div class="doctor-card">
+            <img src="images/img-1.jpg" alt="Doctor's Photo" class="doctor-photo" />
+            <div class="doctor-info">
+              <h2>Dr. Jane Doe</h2>
+              <p class="specialty">Cardiologist</p>
+              <p class="experience">Experience: 10+ years</p>
+              <p class="rating">
+                ⭐⭐⭐⭐⭐ (4.8/5)
+              </p>
+              <button class="view-profile-btn">View Profile</button>
+            </div>
+          </div>
+          
+       
+        </div>
+    </div>
+  
+      
+
+    <script type="module" src="./app.js"></script> 
+</body>
+</html>

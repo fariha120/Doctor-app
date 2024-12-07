@@ -1,0 +1,574 @@
+ .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    padding-left: 2rem; 
+    height: 100vh;
+    background: url('./images/img-1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+ 
+ 
+
+
+ /* --------------------------------- */
+ /* Register Page Centering */
+ .one{
+  width: 100%; /* Allows full width on all devices */
+  max-width: 500px; /* Restricts maximum width for content */
+  margin: 50px auto; /* Centers content horizontally */
+  padding: 20px;
+  border: 2px solid #65a1e1; /* Blue border */
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: Arial, sans-serif; /* Consistent font for the page */
+}
+
+/* Heading Styling */
+.one >.heading1 {
+  color: #531eda;
+  text-align: center; /* Centers text horizontally */
+  margin: 0 0 20px; /* Space below the heading */
+}
+
+/* General Form Styling */
+.one >.custom-form {
+  width: 100%;
+  max-width: 400px; /* Ensures responsive layout */
+  margin: 0 auto; /* Centers the form within the page */
+  padding: 20px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Left-aligns content inside the form */
+}
+
+/* Labels */
+.one >.custom-form .form-label {
+  font-weight: bold;
+  color: #333; /* Dark gray for contrast */
+  margin-bottom: 5px;
+  display: block; /* Ensures labels stack above inputs */
+}
+
+/* Input Fields */
+.one >.custom-form .form-control {
+  width: 100%; /* Full width for inputs */
+  border: 1px solid #898484; /* Neutral gray border */
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px; /* Space below each input */
+}
+
+
+
+.one >.custom-form .form-control:focus {
+  border-color: #007bff; /* Highlighted blue border on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Glow effect */
+  outline: none; /* Remove default browser outline */
+}
+
+/* Form Text */
+.one >.custom-form .form-text {
+  font-size: 12px;
+  color: #6c757d; /* Subtle gray text */
+  margin-top: -10px; /* Adjust spacing to align better */
+  margin-bottom: 15px;
+}
+
+/* Checkbox */
+.one >.custom-form .form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Space below checkbox */
+}
+
+.one >.custom-form .form-check-input {
+  margin-right: 10px; /* Space between checkbox and label */
+}
+
+.one >.custom-form .form-check-label {
+  font-size: 14px;
+  color: #5d635f; /* Neutral dark gray */
+}
+
+/* Role Section */
+#role {
+  margin-bottom: 15px; /* Space below role selection */
+}
+
+#role .form-check {
+  margin-bottom: 10px; /* Space between role options */
+}
+
+#doctor-fields {
+  /* display: none; */
+  margin-top: 10px;
+}
+
+#doctor-fields label {
+  font-weight: bold;
+  margin-top: 10px; /* Space between fields */
+}
+
+#doctor-fields input {
+  width: 100%;
+  margin-top: 5px; /* Spacing above inputs */
+  margin-bottom: 15px; /* Space below each input */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Submit Button */
+.one >.custom-form .btn {
+  background-color: #007bffd0; /* Blue button */
+  color: #fff; /* White text */
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  width: 100%; /* Full width button */
+}
+
+.one >.spinner {
+  border: 4px solid #f3f3f3; /* Light gray */
+  border-top: 4px solid #007bff; /* Blue */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+  }
+  
+   #registerButton{
+    font-size: 20px;
+  }
+}
+
+
+
+.custom-form .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hidden Class for Dynamic Elements */
+.hidden {
+  display: none; /* Hides elements */
+}
+
+
+    #users-list {
+      margin: 24px 0;
+    }
+    
+
+
+
+/* Unique styling for the #Login container */
+#Login {
+  width: 300px;
+  margin: 50px auto; 
+  padding: 20px;
+  border: 2px solid #007bff; 
+  border-radius: 10px;
+  background-color: #f9f9f9; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+}
+
+
+#Login h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+/* Input fields  #Login */
+#Login input[type="email"],
+#Login input[type="password"] {
+  width: 90%; 
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button inside the #Login */
+#Login button {
+  width: 95%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+#Login button:hover {
+  background-color: #007bff; 
+}
+
+
+
+    /* ----------users page----------- */
+    /* Specific styles for the home page */
+    .users-page >.body {
+      height: auto !important;
+    }
+
+    /* Specific styles for the about page */
+    body.about-page { 
+      background-color: lightgreen;
+      color: darkgreen;
+    }
+
+    /* ----------users list------------------ */
+
+    * {
+      color: black;
+  }
+  
+  .users-page > h1 {
+      color: red;
+      font-size: xx-large;
+      background-color: azure;
+  }
+  
+  .users-page >.list {
+      width: 100%;
+      height: 20px;
+  }
+  
+  .users-page >.id {
+      background-color: burlywood;
+  }
+  .users-page >.name {
+      background-color: cadetblue;
+  }
+
+
+
+
+
+  /* --------Doctor Search Page------ */
+
+ .doctor-search-page > body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.doctor-search-page >.search-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.doctor-search-page >.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.doctor-search-page >.filters label {
+    margin-right: 10px;
+}
+
+.doctor-search-page >.filters select, .filters input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* -----------------profile-page------------------ */
+/* General Styles */
+.profile-page > body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.profile-page >.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f7f7; /* Dark background */
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+.navbar-brand2 h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(193, 28, 28);
+  background-color: #d2e5ef;
+ text-shadow: #555;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Section */
+#user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+}
+
+ #profile-pic:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Menu */
+ .dropdown-menu {
+  position: absolute;
+  top: 50px; /* Position below the profile image */
+  right: 0;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 10;
+}
+
+.doctor-search-page > .dropdown-menu a,
+.doctor-search-page > .dropdown-menu button {
+  text-align: left;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.doctor-search-page > .dropdown-menu a:hover,
+.doctor-search-page > .dropdown-menu button:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    margin-top: 10px;
+  }
+
+ .button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  #user-profile {
+    margin-right: 0;
+    margin-top: 5px;
+  }
+}
+
+/* ------------doctor-search-page ---------------------------- */
+/* General Navbar Styles */
+.doctor-search-page > body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f6;
+}
+
+.doctor-search-page >.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1c20; /* Dark background */
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(187, 44, 44);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Section */
+#user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+}
+
+#profile-pic:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333; /* Dark dropdown background */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.xdropdown-menu a:hover,
+.xdropdown-menu button:hover {
+  background-color: #444; /* Hover effect */
+}
+
+.dropdown-menu.show {
+  display: flex; /* Show the dropdown when active */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    margin-top: 10px;
+  }
+}
+
+
+
+ 
+button {
+  padding: 5px 5px;
+  border: unset;
+  border-radius: 4px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+ 
+ button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: #e80b0b;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ .delete-btn:hover {
+  color: #f8f8f8;
+ }
+ 
+ .delete-btn:hover::before {
+  width: 100%;
+ }
