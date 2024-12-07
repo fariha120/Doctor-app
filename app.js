@@ -35,18 +35,6 @@ const pageRoles = {
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyA0UVGyu0JYgo3c77hJDWn1lPXXStyU2C4",
-//   authDomain: "fir-118cd.firebaseapp.com",
-//   projectId: "fir-118cd",
-//   storageBucket: "fir-118cd.firebasestorage.app",
-//   messagingSenderId: "909758234083",
-//   appId: "1:909758234083:web:cc9513da50bea0956134d6",
-//   measurementId: "G-9589FSCE9V"
-//     };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
